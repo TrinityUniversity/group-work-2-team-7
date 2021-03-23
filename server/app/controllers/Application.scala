@@ -1,7 +1,7 @@
 package controllers
 
 import javax.inject._
-
+import models.ApplicationModel
 import shared.SharedMessages
 import play.api.mvc._
 
@@ -12,4 +12,8 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
     Ok(views.html.index(SharedMessages.itWorks))
   }
 
+  def increment = Action {
+    ApplicationModel.increment()
+    Ok(ApplicationModel.get().toString())
+  }
 }

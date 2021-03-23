@@ -1,18 +1,20 @@
+package models
+
 import java.util.concurrent.atomic.AtomicInteger
 
 
-class ApplicationModel {
+object ApplicationModel {
     //var toInc:AtomicInteger = 0
     //val one:AtomicInteger = 1
     var toInc = 0
     
-    def Increment():Unit = {
+    def increment():Unit = {
         synchronized {
             toInc = toInc + 1
         }
     }
 
-    def Get():Int = {
+    def get():Int = {
         synchronized {
             toInc
         }
