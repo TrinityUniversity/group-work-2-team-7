@@ -1,0 +1,10 @@
+@()(implicit request: RequestHeader, flash:Flash)
+
+@main("WebSocket Chat") {
+    
+    @*<input type="hidden" id="ws-route" value="@routes.WebSocket.socket.absoluteURL()">*@
+    <h3 id="IncrementText">0</h3> <button type="button" id="IncButton">Increment</button>
+    <div id="root"></div>
+    <script src="@routes.Assets.versioned("javascript/Advanced.js")"></script>
+        
+}

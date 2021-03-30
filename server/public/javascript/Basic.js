@@ -1,12 +1,11 @@
-var reqToInt = new XMLHttpRequest();
-
 
 const incText = document.getElementById("IncrementText");
-const incButton = document.getElementById("IncrementButton");
+const incButton = document.getElementById("IncButton");
 incButton.onclick = () => {
     fetch("/increment").then((response) => {
         return response.text();
     }).then((responseText) => {
-        incText.innnerHtml = responseText; 
+        console.log(responseText);
+        incText.innerHTML = responseText; 
     })
 };

@@ -4,6 +4,9 @@ import javax.inject._
 import models.ApplicationModel
 import shared.SharedMessages
 import play.api.mvc._
+import akka.actor.Actor
+// import akka.Sstream.Materializer
+
 
 @Singleton
 class Application @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
@@ -16,4 +19,8 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
     ApplicationModel.increment()
     Ok(ApplicationModel.get().toString())
   }
+
+  // def socket = WebSocket.accept[Int, Int] {
+
+  // }
 }

@@ -5,6 +5,7 @@
 # Home page
 GET        /                             controllers.Application.index
 GET        /increment                    controllers.Application.increment
+GET        /react                        controllers.React.load
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
