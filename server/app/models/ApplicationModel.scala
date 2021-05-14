@@ -1,7 +1,8 @@
 package models
 
 import java.util.concurrent.atomic.AtomicInteger
-
+import shared.Message._
+import shared.SharedMessages
 
 object ApplicationModel {
 

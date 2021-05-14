@@ -1,0 +1,10 @@
+@()(implicit request:RequestHeader)
+
+@main("single message") {
+    <input type="text" id="newguyinput">
+    <input type="text" id="messageinput">
+    <input type="submit" id="sendmess">
+    <input type="hidden" id="getMessageRoute" value="@routes.OneMessCont.getOneMess()">
+    <br>
+    <p id="recentmessage"></p>
+}

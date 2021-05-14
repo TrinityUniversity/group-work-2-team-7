@@ -46,10 +46,13 @@ lazy val shared = crossProject(JSPlatform, JVMPlatform)
 lazy val sharedJvm = shared.jvm
 lazy val sharedJs = shared.js
 
+lazy val root = project.
+  enablePlugins(ScalaJSPlugin)
+
 lazy val commonSettings = Seq(
   scalaVersion := "2.13.4",
   organization := "edu.trinity",
-	libraryDependencies += "com.typesafe.play" %% "play-json" % "2.9.1"
+	libraryDependencies += "com.typesafe.play" %%% "play-json" % "2.9.1"
 )
 
 // loads the server project at sbt startup
